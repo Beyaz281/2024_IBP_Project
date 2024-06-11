@@ -1,0 +1,171 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-main{
+    background-color: #424949;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 40px;
+}
+
+.tbox-search{
+    float: left;
+    background: none;
+    border: none;
+    outline: none;
+    color:whitesmoke ;
+    font-size: 16px;
+    width: 0;
+    transition: 1s;
+
+
+}
+
+.btn-search{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: whitesmoke;
+    font-size: 16px;
+    float: right;
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+
+
+}
+
+.search-main:hover >.tbox-search{
+    width: 200px;
+}
+
+#duyuru{
+
+    background: url(../ann.jpg);
+    background-size: cover;
+    padding: 50px;
+    height: auto;
+    text-align: center;
+
+
+}
+
+#h3duyuru{
+    color: white;
+}
+
+#duyuruopak{
+    background: rgba(255, 255, 255, 0.2);
+    padding: 30px 20px ;
+    border-radius: 5px; 
+    margin-bottom: 50px;
+    height: 550px;
+
+
+}
+
+#formgroup{
+    width: 700px ;
+    height: 500px;
+
+
+}
+.form-control{
+    width: 100%;
+    padding: 10px;
+    font-size: 15px;
+    line-height: 1.5px;
+    color: #495057;
+    background-color: white;
+    margin: 10px;
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+
+
+}
+textarea{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+input[type="submit"]{
+    cursor: pointer;
+    background-color: #445c6e;
+    font-size: 18px;
+    letter-spacing: 1px;
+    padding: 10px 30px;
+    color: white;
+    border: 2px solid white;
+    border-radius: 5px;
+    margin-left: 10px;
+    margin-top: 10px;
+    
+
+
+
+}
+
+ /* <?php
+include("baglanti.php");
+
+$sec="Select * From duyuru";
+$sonuc=$baglan->query($sec);
+
+if($sonuc->num_rows>0)
+  {
+    while($cek=$sonuc->fetch_assoc())
+    {
+      echo "
+      <tr>
+            <td><a href='duyurular.php?id=".$cek['id']."'>".$cek['id']."</a></td>
+            <td>".$cek['ad']." </td>
+            <td>".$cek['soyad']."</td>
+            <td>".$cek['konu']."</td>
+            <td>".$cek['duyuru']."</td>
+      </tr>
+      ";
+    }
+  }
+  else
+  {
+    echo"Veri tabanında veri bulunmamaktadır";
+  }
+
+if(isset($_GET["id"])) {
+    $id = $_GET["id"];
+    $sec="Select * From duyuru WHERE id=$id";
+    $sonuc=$baglan->query($sec);
+    if($sonuc->num_rows>0)
+    {
+      $cek=$sonuc->fetch_assoc();
+      $ad = $cek["ad"];
+      $soyad = $cek["soyad"];
+      $konu = $cek["konu"];
+      $duyuru = $cek["duyuru"];
+    }
+}
+
+if(isset($_POST["ad"],$_POST["soyad"],$_POST["konu"],$_POST["duyuru"]))
+{
+  $ad=$_POST["ad"];
+  $soyad=$_POST["soyad"];
+  $konu=$_POST["konu"];
+  $duyuru=$_POST["duyuru"];
+  
+  if(isset($_POST["guncelle"])) {
+    $guncelle = "UPDATE duyuru SET ad='$ad', soyad='$soyad', konu='$konu', duyuru='$duyuru' WHERE id=$id";
+
+    if($baglan->query($guncelle) === TRUE) {
+        echo "<script>alert('Duyuru başarıyla güncellendi')</script>";
+        header("Location: website.php"); // Anasayfaya yönlendir
+        exit;
+    } else {
+        echo "<script>alert('Duyuru güncellenemedi')</script>";
+    }
+  }
+}
+?>*/
